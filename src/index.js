@@ -1,11 +1,9 @@
 import players from "./data/players.js";
-
-async function rollDice() {
-  return Math.floor(Math.random() * 6) + 1;
-}
+import playerRaceEngine from "./game/raceEngine.js";
 
 (async function main() {
   console.log(
     `Corrida entre ${players.playerFirst.NAME} e ${players.playerSecond.NAME} começando...\n`,
   );
+  await playerRaceEngine(players.playerFirst, players.playerSecond);
 })();

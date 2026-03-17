@@ -1,4 +1,4 @@
-export default players = {
+const players = {
   playerFirst: {
     NAME: "Mario",
     VELOCIDADE: 4,
@@ -42,3 +42,4 @@ export default players = {
     PONTOS: 0,
   },
 };
+export default players;

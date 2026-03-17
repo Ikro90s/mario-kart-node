@@ -1,13 +1,24 @@
 {
   "name": "mario-kart-node",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "<h1>Desafio de projeto do Icaro: Mario Kart.JS</h1>",
+  "main": "./src/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ikro90s/mario-kart-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ikro90s/mario-kart-node/issues"
+  },
+  "homepage": "https://github.com/Ikro90s/mario-kart-node#readme"
 }

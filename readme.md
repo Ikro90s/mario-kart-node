@@ -1,4 +1,4 @@
-<h1>Desafio de projeto do Icaro: Mario Kart.JS</h1>
+<h1>Mario Kart.JS</h1>
 
   <table>
         <tr>

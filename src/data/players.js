@@ -1,45 +1,50 @@
-const players = {
-  playerFirst: {
-    NAME: "Mario",
-    VELOCIDADE: 4,
-    MANOBRABILIDADE: 3,
-    PODER: 3,
-    PONTOS: 0,
+import Character from "../models/Character.js";
+
+const playersProfile = [
+  {
+    name: "Mario",
+    speed: 4,
+    handling: 3,
+    power: 3,
   },
-  playerSecond: {
-    NAME: "Luigi",
-    VELOCIDADE: 3,
-    MANOBRABILIDADE: 4,
-    PODER: 4,
-    PONTOS: 0,
+  {
+    name: "Peach",
+    speed: 3,
+    handling: 4,
+    power: 2,
   },
-  playerThird: {
-    NAME: "Peach",
-    VELOCIDADE: 3,
-    MANOBRABILIDADE: 4,
-    PODER: 2,
-    PONTOS: 0,
+  {
+    name: "Yoshi",
+    speed: 2,
+    handling: 4,
+    power: 3,
   },
-  playerFourth: {
-    NAME: "Yoshi",
-    VELOCIDADE: 2,
-    MANOBRABILIDADE: 4,
-    PODER: 3,
-    PONTOS: 0,
+  {
+    name: "Bowser",
+    speed: 5,
+    handling: 2,
+    power: 5,
   },
-  playerFifth: {
-    NAME: "Bowser",
-    VELOCIDADE: 5,
-    MANOBRABILIDADE: 2,
-    PODER: 5,
-    PONTOS: 0,
+  {
+    name: "Luigi",
+    speed: 3,
+    handling: 4,
+    power: 4,
   },
-  playerSixth: {
-    NAME: "Donkey Kong",
-    VELOCIDADE: 2,
-    MANOBRABILIDADE: 2,
-    PODER: 5,
-    PONTOS: 0,
+  {
+    name: "Donkey Kong",
+    speed: 2,
+    handling: 2,
+    power: 5,
   },
-};
-export default players;
+];
+
+/**
+ * Cria uma nova lista de jogadores como instâncias de Character.
+ */
+function createPlayers() {
+  return playersProfile.map((profile) => new Character(profile));
+}
+
+export { playersProfile, createPlayers };
+export default createPlayers;

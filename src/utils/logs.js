@@ -1,7 +1,10 @@
-async function logRollFunction(characterName, block, diceResult, attribute) {
+/**
+ * Exibe no console o teste de atributo realizado por um personagem.
+ */
+function logRoll(characterName, block, diceResult, attribute) {
   console.log(
-    `${characterName} jogou dado de ${attribute} na curva ${block} e tirou ${diceResult}`,
+    `${characterName} testou ${attribute} no bloco ${block} e tirou ${diceResult}`,
   );
 }
 
-export default logRollFunction;
+export default logRoll;

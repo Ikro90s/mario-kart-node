@@ -17,6 +17,8 @@ async function playerRaceEngine(character1, character2) {
     let totalTestSkillFirst = 0;
     let totalTestSkillSecond = 0;
 
+    //Verificando o vencedor da rodada de acordo com o bloco sorteado
+
     if (block === "RETA") {
       totalTestSkillFirst = character1.VELOCIDADE + diceResultFirst;
       totalTestSkillSecond = character2.VELOCIDADE + diceResultSecond;
@@ -56,6 +58,16 @@ async function playerRaceEngine(character1, character2) {
       await logRollFunction(character1.NAME, block, diceResultFirst, "poder");
       await logRollFunction(character2.NAME, block, diceResultSecond, "poder");
     }
+    if (totalTestSkillFirst > totalTestSkillSecond) {
+      console.log(`\n${character1.NAME} marcou um ponto!`);
+      character1.PONTOS++;
+    } else if (totalTestSkillSecond > totalTestSkillFirst) {
+      console.log(`\n${character2.NAME} marcou um ponto!`);
+      character2.PONTOS++;
+    } else {
+      console.log(`\nOs jogadores empataram!`);
+    }
+    console.log("------------------------------");
   }
 }
 
